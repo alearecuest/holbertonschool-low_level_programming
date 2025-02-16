@@ -3,6 +3,9 @@
 /**
  * main - Entry point
  *
+ * Description: Prints the sizes of various data types on the computer
+ * it is compiled and run.
+ *
  * Returno: Always 0 (Success)
  */
 int main(void)
