@@ -2,8 +2,8 @@
 
 /**
 * main - Entry point
-* 
-* Description: Program that prints the alphabet in lowercase.
+*
+* Description: Program that prints de alphabet in lowercase
 *
 * Return: Always 0 (Success)
 */
