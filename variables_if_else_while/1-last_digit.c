@@ -5,8 +5,8 @@
 /**
  * main - Entry point
  *
- * Description: This program will assign a random number to the variable n 
- * each time it is executed.
+ * Description: This program assigns a random number to the variable n
+ * each time it is executed, then prints its last digit and a message.
  *
  * Return: Always 0 (Success)
  */
@@ -35,6 +35,6 @@ int main(void)
 		printf("and is less than 6 and not 0\n");
 	}
 
-	return 0;
+	return (0);
 }
 
