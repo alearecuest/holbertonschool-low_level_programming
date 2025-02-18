@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: Program that prints all single digit numbers of 
+ * Description: Program that prints all single digit numbers of
  * base ten starting from zero
  *
  * Return: Always 0 (Success)
