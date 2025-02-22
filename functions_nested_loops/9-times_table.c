@@ -7,8 +7,9 @@
  */
 void times_table(void)
 {
-	int i, j, product
-	for(i = 0; i <= 9; i++)
+	int i, j, product;
+
+	for (i = 0; i <= 9; i++)
 	{
 		for (j = 0; j <= 9; j++)
 		{
@@ -18,7 +19,9 @@ void times_table(void)
 					_putchar(',');
 					_putchar(' ');
 					if (product < 10)
-						_putchar(' ');
+					{
+						_putchar(',');
+					}
 				}
 				if (product >= 10)
 				{
