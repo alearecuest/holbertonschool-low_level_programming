@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _isdigit(int c);
 int _isupper(int c);
 void print_to_98(int n);
 int add(int, int);
