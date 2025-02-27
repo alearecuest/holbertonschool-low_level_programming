@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * rev_string - inverse a string of characters.
@@ -12,11 +13,10 @@ void rev_string(char *s)
 	int i;
 	char temp;
 
-	while (s[leng] != ('\n'))
+	while (s[leng] != ('\0'))
 	{
 		leng++;
 	}
-
 	for (i = 0; i < leng / 2; i++)
 	{
 		temp = s[i];
