@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts_half prints the second half of a string.
+ * puts_half - prints the second half of a string.
  * @str: chain of characters.
  *
  * Return: void
