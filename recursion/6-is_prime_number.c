@@ -22,7 +22,7 @@ int is_prime_helper(int n, int x)
  *
  * Return: 1 if n is prime, 0 otherwise
  */
-int _is_prime_number(int n)
+int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
