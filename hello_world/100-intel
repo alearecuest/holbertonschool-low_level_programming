@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Extrae el nombre base del archivo sin la extensión
+BASENAME=$(basename "$CFILE" .c)
+
+# Genera el código ensamblador con sintaxis Intel y lo guarda en el archivo de salida
+gcc -S -masm=intel "$CFILE" -o "${BASENAME}.s"
+
+# Mensaje de éxito
+echo "El código ensamblador se ha generado en ${BASENAME}.s"
