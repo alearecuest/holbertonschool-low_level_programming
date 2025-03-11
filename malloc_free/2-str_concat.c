@@ -7,14 +7,14 @@
  * @s2: The second string.
  *
  * Return: A pointer to a newly allocated space in memory which contains
- *         the contents of s1, followed by the contents of s2,
- *         and null terminated.
- *         If NULL is passed, treat it as an empty string.
- *         The function returns NULL on failure.
+ * the contents of s1, followed by the contents of s2,
+ * and null terminated.
+ * If NULL is passed, treat it as an empty string.
+ * The function returns NULL on failure.
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, leng1, leng2;
+	int i, j, leng1 = 0, leng2 = 0;
 	char *conca;
 
 	if (s1 == NULL)
@@ -31,6 +31,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		leng1++;
 	}
+
 	for  (j = 0; s2[j] != '\0'; j++)
 	{
 		leng2++;
@@ -45,7 +46,10 @@ char *str_concat(char *s1, char *s2)
 
 	for (j = 0; j < leng2; j++)
 		conca[leng1 + i] = s2[i];
+
 	conca[leng1 + leng2] = '\0';
+
+	free(conca);
 
 	return (conca);
 }
