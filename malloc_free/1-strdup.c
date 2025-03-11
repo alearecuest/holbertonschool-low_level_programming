@@ -32,5 +32,7 @@ char *_strdup(char *str)
 	for (j = 0; j <= i; j++)
 		dupl[j] = str[j];
 
+	free(dupl);
+
 	return (dupl);
 }
