@@ -53,7 +53,7 @@ int op_div(int a, int b)
 		exit(100);
 	}
 
-	(a / b);
+	return (a / b);
 }
 
 /**
@@ -70,5 +70,6 @@ int op_mod(int a, int b)
 		printf("Error\n");
 		exit(100);
 	}
-	(a % b);
+
+	return (a % b);
 }
