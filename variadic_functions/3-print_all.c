@@ -50,6 +50,8 @@ void print_all(const char * const format, ...)
 				printf("%s", str);
 				printed = 1;
 				break;
+			default:
+				break;
 		}
 		i++;
 	}
