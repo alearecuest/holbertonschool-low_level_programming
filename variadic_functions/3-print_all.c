@@ -15,40 +15,39 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i = 0, printed = 0;
+	unsigned int i = 0;
 	char *str;
+	char *separator = "";
 
 	va_start(args, format);
+
 	while (format && format[i])
 	{
-		if (printed)
-			printf(", ");
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(args, int));
-				printed = 1;
+				printf("%s%c", separator, va_arg(args, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(args, int));
-				printed = 1;
+				printf("%s%d", separator, va_arg(args, int));
 				break;
 			case 'f':
-				printf("%f", (float)va_arg(args, double));
-				printed = 1;
+				printf("%s%f", separator, (float)va_arg(args, double));
 				break;
 			case 's':
 				str = va_arg(args, char *);
 				if (!str)
 					str = "(nil)";
-				printf("%s", str);
-				printed = 1;
+				printf("%s%s", separator, str);
 				break;
 			default:
-				break;
+				i++;
+				continue;
 		}
+		separator = ", ";
 		i++;
 	}
+
 	va_end(args);
 	printf("\n");
 }
