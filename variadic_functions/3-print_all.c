@@ -6,7 +6,7 @@
 /**
  * print_all - Prints anything based on the format provided.
  * @format: A list of types of arguments passed to the function.
- * 
+ *
  * Description: This function prints various types of arguments
  * (char, integer, float, and string) based on the format specified.
  * If the string argument is NULL, it prints (nil) instead.
@@ -39,15 +39,11 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				str = va_arg(args, char *);
-				if (str == NULL)
-					printf("(nil)");
-				else
-					printf("%s", str);
+				if (!str)
+					str = "(nil)";
+				printf("%s", str);
 				printed = 1;
 				break;
-			default:
-				i++;
-				continue;
 		}
 		i++;
 	}
