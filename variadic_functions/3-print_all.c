@@ -21,29 +21,23 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (format && format[i])
 	{
+		if (printed)
+			printf(", ");
 		switch (format[i])
 		{
 			case 'c':
-				if (printed)
-					printf(", ");
 				printf("%c", va_arg(args, int));
 				printed = 1;
 				break;
 			case 'i':
-				if (printed)
-					printf(", ");
 				printf("%d", va_arg(args, int));
 				printed = 1;
 				break;
 			case 'f':
-				if (printed)
-					printf(", ");
 				printf("%f", (float)va_arg(args, double));
 				printed = 1;
 				break;
 			case 's':
-				if (printed)
-					printf(", ");
 				str = va_arg(args, char *);
 				if (!str)
 					str = "(nil)";
