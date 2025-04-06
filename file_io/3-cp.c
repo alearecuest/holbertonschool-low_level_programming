@@ -55,15 +55,19 @@ int main(int argc, char *argv[])
 	if (fd_to == -1)
 		error_file(99, "Error: Can't write to", argv[2]);
 
-	while ((rd = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	while (1)
 	{
+		rd = read(fd_from, buffer, BUFFER_SIZE);
+		if (rd == -1)
+			error_file(98, "Error: Can't read from file", argv[1]);
+
+		if (rd == 0)
+			break;
+
 		wr = write(fd_to, buffer, rd);
 		if (wr == -1 || wr != rd)
 			error_file(99, "Error: Can't write to", argv[2]);
 	}
-
-	if (rd == -1)
-		error_file(98, "Error: Can't read from file", argv[1]);
 
 	if (close(fd_from) == -1)
 		error_fd(100, "Error: Can't close fd", fd_from);
